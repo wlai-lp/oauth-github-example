@@ -1,5 +1,5 @@
 const URL_PARAMS = new URLSearchParams(window.location.search);
-const TOKEN = URL_PARAMS.get('token');
+const CODE = URL_PARAMS.get('code');
 
 // Show an element
 const show = (selector) => {
@@ -11,7 +11,7 @@ const hide = (selector) => {
   document.querySelector(selector).style.display = 'none';
 };
 
-if (TOKEN) {
+if (CODE) {
   hide('.content.unauthorized');
   show('.content.authorized');
 }
